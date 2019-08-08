@@ -41,3 +41,5 @@ class UserAccount:
         acc['password'] = new_password
         return 'Password has changed'
     return "Password doesnt exists."
+  def view_total_count_users(self):
+      return 'Total number of users: {}'.format(UserAccount.user_count) 

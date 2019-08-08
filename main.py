@@ -25,7 +25,8 @@ def menu():
   3.) d - display user account data
   4.) cp - forgot/change password?
   5.) s - save user account data
-  6.) q - quit
+  6.) c - check total count of users
+  7.) q - quit
   """)
   while choice != 'q':
     if choice == 'r':
@@ -48,6 +49,8 @@ def menu():
       print(user_account.change_password(username, new_password, old_password))
     elif choice == 's':
       user_account.save()
+    elif choice == 'c':
+      print(user_account.view_total_count_users())
     elif choice == 'q':
       break
     choice = input("""
@@ -56,7 +59,8 @@ def menu():
   3.) d - display user account data
   4.) cp - forgot/change password?
   5.) s - save user account data
-  6.) q - quit
+  6.) c - check total count of users
+  7.) q - quit
   """)
 
 menu()
